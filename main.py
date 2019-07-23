@@ -19,4 +19,16 @@ def get_capacity():
         room_201_capacity = data_set['data']['rooms'][0]['capacity']
     return room_201_capacity
 
-print(get_capacity())
+# print(get_capacity())
+
+
+dd = data_set['data']['events']
+for list_item in dd:
+    if list_item['room_id'] == 1:
+        if list_item['attendees'] <= get_capacity(): 
+            print('yes') 
+        else: 
+            print('Please find another venue!')
+
+
+
